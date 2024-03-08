@@ -10,3 +10,7 @@ class TestHTMLNode(unittest.TestCase):
     def test_props_to_html_empty(self):
         node = HTMLNode(None, None, None, {})
         self.assertEqual(node.props_to_html(), "")
+
+    def test_props_to_html_none(self):
+        node = HTMLNode(None, None, None, None)
+        self.assertEqual(node.props_to_html(), "")
